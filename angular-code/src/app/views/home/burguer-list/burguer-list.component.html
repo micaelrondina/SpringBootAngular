@@ -1,0 +1,58 @@
+<mat-tab-group mat-align-tabs="start" class="tab-group">
+    <mat-tab label="PROXIMOS">
+        <div fxLayout="row" fxLayoutAlign="start center" class="fxLayout">
+            <ng-container *ngFor="let cliente of clientes" class="t">
+                <mat-card class="example-card" 
+                fxFlex="0 1 calc(33.3% - 11px)"
+                fxFlex.lt-md="0 1 calc(50%-11px)"
+                fxFlext.lt-sm="100%"                
+                >
+                    <mat-card-title class="mat-card">
+                     
+                    </mat-card-title>
+                    <div class="row">
+                      <p>
+                        <span fx-flex="70">{{cliente.id}}</span>
+                        <span fx-flex></span>
+                        <span fx-flex="25">{{cliente.nome}}</span>
+                      </p>
+                    </div>
+         
+                    <mat-card-content>
+                      <p>
+               
+                      </p>
+                    </mat-card-content>
+                  </mat-card>
+            </ng-container>
+        </div>
+    </mat-tab>
+    <mat-tab label="REALIZADAS">
+      <div fxLayout="row" fxLayoutAlign="start center" class="fxLayout">
+        <ng-container *ngFor="let obj of myObj" class="t">
+            <mat-card class="example-card" 
+            fxFlex="0 1 calc(33.3% - 11px)"
+            fxFlex.lt-md="0 1 calc(50%-11px)"
+            fxFlext.lt-sm="100%"                
+            >
+                <mat-card-title class="mat-card">
+                 
+                </mat-card-title>
+                <div class="row">
+                  <p>
+                    <span fx-flex="70">{{obj.date | localDateTime}}</span>
+                    <span fx-flex></span>
+                   
+                  </p>
+                </div>
+     
+                <mat-card-content>
+                  <p>
+           
+                  </p>
+                </mat-card-content>
+              </mat-card>
+        </ng-container>
+    </div>
+  </mat-tab>
+  </mat-tab-group>
