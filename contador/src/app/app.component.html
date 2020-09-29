@@ -1,0 +1,12 @@
+<h1>{{numero}}</h1>
+<button (click)="incrementar()"> Incrementar</button>
+<app-data-binding></app-data-binding>
+
+    <ul>
+      <li><a routerLink="ciclo">CICLO</a></li>
+    </ul>
+
+    <app-ciclo [valorInicial]="numero" *ngIf="!destruirCiclo"> </app-ciclo>
+
+    <button (click)="destruir()"> DELETAR</button>
+  <router-outlet></router-outlet>

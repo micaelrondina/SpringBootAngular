@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Hi Micael</h1>
+
+
+<div mat-dialog-content>
+  <form class="formGroup" [formGroup]="burguerForm">
+    <mat-form-field class="formField">
+      <mat-label>Id:</mat-label>
+      <input matInput formControlName="id" name="id">
+    </mat-form-field>
+
+    <mat-form-field class="formField">
+      <mat-label>Nome:</mat-label>
+      <input matInput formControlName="nome" name="nome">
+    </mat-form-field>
+
+  </form>
+
+</div>
+<div mat-dialog-actions>
+
+  <button mat-raised-button color="primary" (click)="adicionarCliente()">Add</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+</div>
